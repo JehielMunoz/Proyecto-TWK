@@ -20,7 +20,7 @@ const routes = [
   { path: '/buscarProducto',  component: buscarProducto },
   { path: '/agregarProducto', component: agregarProducto },
   //{ path: '*', component: ErrorComponent }, //pantalla de error
-  { path: '/', component: Home }, //Ruta Base
+  { path: '/',                component: Home }, //Ruta Base
   { path: '/home', name:Home, component: Home }
   //{ path: '/login', component: Login:id? }, //el ? es opcional
 ]

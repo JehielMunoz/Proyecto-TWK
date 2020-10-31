@@ -28,7 +28,7 @@
     float:left;
     overflow: auto;
 }
-#detail-holder {
+#detail-holder{
     position: relative;
     left: 2%;
     border: 2px solid powderblue;
@@ -38,11 +38,13 @@
     width: 24%;
     overflow: hidden;
 }
+/*
 #button-holder{
     width: 50%;
     float:left;
     display: inline-grid;
 }
+*/
 #detail-holder table, #table-holder table{
     border-collapse:collapse;
     border-radius: 10px;
@@ -56,7 +58,7 @@
     border-collapse: collapse;
     border: 1px solid lightslategray;
 }
-#button-holder{
+#button-holder, #inputHolder {
     width: 75%;
     height:25%;
     border-color: #2c3e50;
