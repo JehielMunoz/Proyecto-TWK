@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <h2>Compras</h2><router-link to="/home"> Volver </router-link>
-        <div id="table-holder">
+        <h2>Compras (Reabastecimiento)</h2><router-link to="/home"> Volver </router-link><br>
+        <div id="table-holder" style="width:55%;left:5%">
             <table class="list-Holder">
                 <thead>
                 <th>N°</th>
@@ -17,15 +17,19 @@
                     <td><button v-on:click="delItem(prod)">Eliminar Producto</button></td>
                 </tr>
             </table>
+            <br><p>{{productos}}</p>
         </div>
-        <div id="inputHolder">
-            <input v-model="nomProd" type="string"/>
-            <input v-model="marProd" type="string"/>
-            <input v-model="preProd" type="string"/>
-            <input v-model="cntProd" type="string"/>
+        <div id="inputHolder" style="right:5%;position: fixed;">
+            <input v-model="nomProd" type="string" placeholder="Nombre del Producto"/>
+            <input v-model="marProd" type="string" placeholder="Marca del producto"/>
+            <input v-model="cntProd" type="string" placeholder="Cantidad a ingresar"/>
             <button v-on:click="addItem">Agregar Producto</button>
+            <form method="get" @submit="processForm">
+                <label>Enviar Solicitud</label>
+                <input type="submit" name="reqProd" id="reqProd" value="Submit">
+            </form>
         </div>
-        <br><br><br><br><p>{{productos}}</p>
+
     </div>
 </template>
 
@@ -60,12 +64,20 @@
                 if (indice != -1) {
                     this.productos.splice(indice, 1);
                 }
-                /*this.productos.splice(this.prod.indexOf(prod),1);
                 if(this.productos.length==0){
                     this.indx=0;
                 }
-                this.productos.pop() console.log(productos);this.indx = ind,ind*/
                 console.log(this.indx)
+            },
+            processForm: function() {
+                console.log({
+                    Nombre_Producto:    this.nomProd,
+                    Codigo_Producto:    this.codProd,
+                    Marca_Producto:     this.marProd,
+                    Precio_Producto:    this.preProd,
+                    CantidadSolicitada: this.cntProd,
+                });
+                alert('Enviado!');
             }
         }
     }

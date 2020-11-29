@@ -58,12 +58,20 @@
     border-collapse: collapse;
     border: 1px solid lightslategray;
 }
-#button-holder, #inputHolder {
+#button-holder {
     width: 75%;
     height:25%;
     border-color: #2c3e50;
     display:inline-grid;
     position:relative
+}
+#inputHolder {
+    width: 25%;
+    height:25%;
+    border-color: #2c3e50;
+    display:inline-grid;
+    position:relative;
+    float:right;
 }
 #button-holder button{
     width:15%;
@@ -78,12 +86,17 @@
     width:25%;
     height: 25%;
     top:-5px;
-    left:75%;
+    left:60%;
     border-color: #2c3e50;
-    display:inline-block;
+    display:grid;
     position:relative
 }
-
+#btnManual{
+    width:75%;
+    height: 25%;
+    top:15px;
+    border-color: #2c3e50;
+}
 a:link,a:visited,a:active,a:hover {
     text-decoration: none;
     font-family: Avenir, Helvetica, Arial, sans-serif;

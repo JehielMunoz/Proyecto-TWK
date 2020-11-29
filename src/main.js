@@ -7,7 +7,8 @@ import compras from "./components/compras";
 import cierreCaja from "./components/cierreCaja";
 import totalDia from "./components/totalDia";
 import buscarProducto from "./components/buscarProducto";
-import agregarProducto from "./components/agregarProducto";
+//import ingresoProducto from "./components/ingresoProducto";
+import ingresoProducto from "./components/ingresoProducto";
 
 Vue.config.productionTip = false
 
@@ -15,10 +16,10 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/ventas',          component: ventas  },
   { path: '/compras',         component: compras },
+  { path: '/ingresoProducto', component: ingresoProducto },
   { path: '/cierreCaja',      component: cierreCaja },
   { path: '/totalDia',        component: totalDia },
   { path: '/buscarProducto',  component: buscarProducto },
-  { path: '/agregarProducto', component: agregarProducto },
   //{ path: '*', component: ErrorComponent }, //pantalla de error
   { path: '/',                component: Home }, //Ruta Base
   { path: '/home', name:Home, component: Home }
