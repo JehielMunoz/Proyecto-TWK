@@ -1,13 +1,16 @@
 <template>
+    
+</template>
+<template>
     <div>
-        <h2>Ingreso productos</h2><router-link to="/home"> Volver </router-link><br><br>
+        <h2>Ingreso de productos</h2><router-link to="/home"> Volver </router-link><br><br>
         <div id="addProdFormHolder">
             <form method="get" id="addProdForm"  @submit="processForm">
-                <label for="nomProd">Nombre del producto:</label><br>
-                <input type="text" id="nomProd" name="nomProd" v-model="nomProd"><br>
-
                 <label for="codProd">Codigo del Producto:</label><br>
                 <input type="text" id="codProd" name="codProd" v-model="codProd"><br>
+
+                <label for="nomProd">Nombre del producto:</label><br>
+                <input type="text" id="nomProd" name="nomProd" v-model="nomProd"><br>
 
                 <label for="cantProd">Cantidad a ingresar:</label><br>
                 <input type="text" id="cantProd" name="cantProd" v-model="cantProd"><br>
@@ -22,11 +25,11 @@
                 <input type="text" id="proveedor" name="proveedor" v-model="proveedor"><br>
 
                 <p>Categoria:</p>
-                    <select name="catProd" id="catProd" v-model="catProd">>
-                        <option value="Vegetales">Vegetales</option>
-                        <option value="Bebidas">Bebidas</option>
-                        <option value="Ferreteria">Ferreteria</option>
-                    </select><br>
+                <select name="catProd" id="catProd" v-model="catProd">>
+                    <option value="Vegetales">Vegetales</option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Ferreteria">Ferreteria</option>
+                </select><br>
 
                 <p>Unidad de medida:</p>
                 <select name="uMedida" id="uMedida" v-model="uMedida">>
@@ -46,7 +49,7 @@
 </template>
 <script>
     export default {
-        name: "agregarProducto",
+        name: "flujoEntrada",
         data: function(){
             return {
                 nomProd: '',
@@ -58,8 +61,8 @@
                 catProd: '',
                 uMedida: '',
                 desc: '',
-                }
-            },
+            }
+        },
         methods: {
             processForm: function() {
                 var ingresoProd = {
@@ -87,5 +90,10 @@
                 );
             }
         }
+    }
+</script>
+<script>
+    export default {
+        name: "flujoEntrada"
     }
 </script>

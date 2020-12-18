@@ -45,6 +45,26 @@
     display: inline-grid;
 }
 */
+#fullListTable{
+    border-collapse: collapse;
+    width: 100%;
+}
+#fullListTable td, #fullListTable th ,#addProd td, #addProd th {border: 1px solid #ddd;padding: 8px;}
+/*#fullListTable tr:nth-child(even){background-color: lightgrey;}*/
+#fullListTable tr:hover, #addProd tr:hover {background-color: lightcyan;}
+#fullListTable th, #addProd th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: lightslategray;
+    color: white;
+}
+
+#selectCrearHolder, #homeHolder, #buscaHolder, #addProd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #detail-holder table, #table-holder table{
     border-collapse:collapse;
     border-radius: 10px;

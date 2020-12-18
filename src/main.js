@@ -7,8 +7,9 @@ import compras from "./components/compras";
 import cierreCaja from "./components/cierreCaja";
 import totalDia from "./components/totalDia";
 import buscarProducto from "./components/buscarProducto";
+import crearProducto from "./components/crearProducto";
 //import ingresoProducto from "./components/ingresoProducto";
-import ingresoProducto from "./components/ingresoProducto";
+//import ingresoProducto from "./components/crearProducto";
 
 Vue.config.productionTip = false
 
@@ -16,7 +17,7 @@ Vue.use(VueRouter);
 const routes = [
   { path: '/ventas',          component: ventas  },
   { path: '/compras',         component: compras },
-  { path: '/ingresoProducto', component: ingresoProducto },
+  { path: '/crearProducto',   component: crearProducto },
   { path: '/cierreCaja',      component: cierreCaja },
   { path: '/totalDia',        component: totalDia },
   { path: '/buscarProducto',  component: buscarProducto },
